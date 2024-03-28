@@ -1,0 +1,80 @@
+:root{
+    --grid-columns: 
+    9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
+
+    --grid-rows: 3%
+    7% 7% 64% 7%;
+    --grid-margin: 0;
+    --grid-column-gutter: 1%;
+    --grid-row-gutter: 3%;
+    --grid-type: 'stretch'
+}
+
+
+
+.container-grid{
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: var(--grid-columns);
+    grid-template-rows: var(--grid-rows);
+        
+    gap: var(--grid-row-gutter) var(--grid-column-gutter);
+    padding: var(--grid-margin);
+    justify-content: var(--grid-type);
+
+    margin: auto;
+
+}
+
+
+.mb-col-main{
+    grid-column: 1/11;
+    margin-left: 1%;
+}
+
+.mb-row-title{
+    grid-row: 2/3;
+    display: flex;
+
+
+}
+.mb-row-addbox{
+    grid-row: 3/4;
+    display: flex;
+
+}
+.mb-row-todolist{
+    grid-row: 4/5;
+    display: flex;
+}
+.mb-row-note{
+    grid-row: 5/6;
+    display: flex;
+
+}
+
+/* Tablet */
+@media (min-width: 767px) {
+  .tb-col-main{
+    grid-column: 2/10;
+  }
+}
+
+/* PC low resolution */
+@media (min-width: 1023px) {
+    .m-col-main{
+        grid-column: 3/9;
+
+      }
+}
+ 
+
+/* PC low resolution */
+@media (min-width: 1365px){
+    .l-col-main{
+        grid-column: 3/9;
+    }
+}

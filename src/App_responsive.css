@@ -1,0 +1,14 @@
+.appTodo {
+    /* Tablet */
+    @media (min-width: 767px) {
+        background-image: var(--background-image-mobile);
+    }
+    /* PC low resolution */
+    @media (min-width: 1023px) {
+        background-image: var(--background-image);
+    }
+    /* PC low resolution */
+    @media (min-width: 1365px) {
+        background-image: var(--background-image);
+    }
+}

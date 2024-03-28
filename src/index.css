@@ -1,13 +1,124 @@
-body {
+/* ### Primary
+
+- Bright Blue: hsl(220, 98%, 61%)
+- Check Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
+
+### Neutral
+
+### Light Theme
+
+- Very Light Gray: hsl(0, 0%, 98%)
+- Very Light Grayish Blue: hsl(236, 33%, 92%)
+- Light Grayish Blue: hsl(233, 11%, 84%)
+- Dark Grayish Blue: hsl(236, 9%, 61%)
+- Very Dark Grayish Blue: hsl(235, 19%, 35%)
+
+### Dark Theme
+
+- Very Dark Blue: hsl(235, 21%, 11%)
+- Very Dark Desaturated Blue: hsl(235, 24%, 19%)
+- Light Grayish Blue: hsl(234, 39%, 85%)
+- Light Grayish Blue (hover): hsl(236, 33%, 92%)
+- Dark Grayish Blue: hsl(234, 11%, 52%)
+- Very Dark Grayish Blue: hsl(233, 14%, 35%)
+- Very Dark Grayish Blue: hsl(237, 14%, 26%) */
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--primarytext-color);
+  font-size: 12px;
+
+      /* Tablet */
+      @media (min-width: 767px) {
+        font-size: 14px;
+    }
+
+    /* PC low resolution */
+    @media (min-width: 1023px) {
+      font-size: 16px;
+    }
+
+
+    /* PC low resolution */
+    @media (min-width: 1365px) {
+      font-size: 16px;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.footerList {
+  /* Tablet */
+  @media (min-width: 767px) {
+      flex-direction: row;
+  }
+
+  /* PC low resolution */
+  @media (min-width: 1023px) {
+      flex-direction: row;
+  }
+
+
+  /* PC low resolution */
+  @media (min-width: 1365px) {
+      flex-direction: row;
+  }
 }
+}
+
+[data-theme="light"]{
+  --backgound-color: hsl(236, 33%, 92%);
+  --background-image: url('./images/bg-desktop-light.jpg');
+  --background-image-mobile: url('./images/bg-mobile-light.jpg');
+  --background-buttonmode: url('./images/icon-moon.svg');
+  --backgroundbox-color: hsl(0, 0%, 98%);
+  --backgroundbox-dragging: hsl(233, 11%, 84%);
+  --primarytext-color: hsl(235, 19%, 35%);
+  --secondarytext-color: hsl(236, 9%, 61%);
+
+  --buttonhover-color: hsl(235, 21%, 11%);
+
+
+  --color0: hsl(0, 0%, 98%);
+  --color1: hsl(236, 33%, 92%);
+  --color2: hsl(233, 11%, 84%);
+  --color3: hsl(236, 9%, 61%);
+  --color4: hsl(235, 19%, 35%);
+
+}
+
+[data-theme="dark"]{
+  --backgound-color: hsl(235, 21%, 11%);
+  --background-image: url('./images/bg-desktop-dark.jpg');
+  --background-image-mobile: url('./images/bg-mobile-dark.jpg');
+  --background-buttonmode: url('./images/icon-sun.svg');
+  --backgroundbox-color: hsl(235, 24%, 19%);
+  --backgroundbox-dragging: hsl(237, 14%, 26%);
+  --primarytext-color: hsl(234, 39%, 85%);
+  --secondarytext-color: hsl(236, 9%, 61%);
+
+  --buttonhover-color: hsl(236, 33%, 92%);
+
+
+  --color0: hsl(235, 21%, 11%);
+  --color1: hsl(235, 24%, 19%);
+  --color2: hsl(234, 39%, 85%);
+  --color3: hsl(236, 33%, 92%);
+  --color4: hsl(234, 11%, 52%);
+  --color3: hsl(233, 14%, 35%);
+  --color4: hsl(237, 14%, 26%);
+}
+
+.taskName[taskdone="false"]{
+  --labelcolor: var(--primarytext-color);
+  --text-decoration: none;
+}
+.taskName[taskdone="true"]{
+  --labelcolor: var(--secondarytext-color);
+  --text-decoration: line-through;
+}
+
+

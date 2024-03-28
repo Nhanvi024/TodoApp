@@ -1,0 +1,36 @@
+.addTaskBox {
+    width: 100%;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 0 0 20px;
+    gap: 20px;
+
+    background-color: var(--backgroundbox-color);
+}
+.completedCheckBox{
+    width: 1.2rem;
+    height: 1.2rem;
+
+    background-clip: content-box;
+    background-color: var(--backgroundbox-color);
+    border: 1px solid var(--secondarytext-color);
+    border-radius: 50%;
+}
+
+.inputNewTask{
+    height: 100%;
+    border: none;
+    background: none;
+    
+    font-size: 1.2rem;
+
+    /* flex item properties */
+    flex-grow: 1;
+
+    &:focus{
+        outline: none;
+    }
+}

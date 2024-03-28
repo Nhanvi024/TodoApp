@@ -1,0 +1,27 @@
+.todoTitle {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+.titleTodo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: hsl(0, 0%, 98%);
+
+    letter-spacing: 10px;
+}
+.buttonChangeMode {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    border: none;
+    background: none;
+    
+    background-image: var(--background-buttonmode) ;
+    background-size: contain;
+    background-position: center;
+    background-repeat:no-repeat;
+}
